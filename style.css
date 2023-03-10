@@ -1,0 +1,507 @@
+/*
+
+1. Posicionamiento
+2. Modelo caja (Box model)
+3. Tipografía
+4. Visuales
+5. Otros
+
+*/
+
+:root {
+    /* Colores */
+    --bitcon-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey: #BABABA;
+    --parrafo: #757575;
+    --off-white: #FAF8F7;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header img {
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+
+.header__title-container {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    margin-top: 40px;
+    text-align: center;
+    align-self: center;
+}
+.header__title-container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--off-white);
+}
+.header__title-container p {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+.header__title-container .header__button {
+    position: absolute;
+    left: calc(50% - 114.5px);
+    top: 270px;
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+}
+.header__button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/arrow-down.svg");
+    background-position: center;
+}
+
+/* ----- MAIN CONTENT ----- */
+
+main {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background-color: var(--off-white);
+}
+.main__exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.main__exchange-container .backgroundImg {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url("./assets/imgs/bitcoin.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main__exchange-container--title {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.main__exchange-container--title h2 {
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.main__exchange-container--title p {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: var(--parrafo);
+}
+.main__tables-container {
+    width: 200px;
+    max-width: 408px;
+    margin: 0 auto;
+    position: relative;
+}
+.main__box {
+    margin: 0 10px;
+}
+.main__title-cards{
+    text-align: start;
+    color: var(--bitcon-orange);
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.6rem;
+    margin: 0 9px 10px 9px;
+}
+.blue--secondary {
+    color: var(--secondary-blue);
+}
+.main__grid-container {
+    height: 130px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    place-items: flex-start;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+}
+.main__item-coins p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #B5B0AC;
+}
+.main__item-prices p{
+    width: 62px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: var(--parrafo);
+}
+.main__item-prices span {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-image: url("./assets/icons/trending-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.main__item-prices .eth {
+    background-image: url("./assets/icons/trending-up.svg");
+}
+
+.main__arrow-right {
+    display: inline-block;
+    position: absolute;
+    bottom: 33.3rem;
+    right: 0;
+}
+.main__arrow-left {
+    display: inline-block;
+    position: absolute;
+    bottom: 10.3rem;
+    left: 0;
+}
+
+.main__arrow-right img, .main__arrow-left img {
+    width: 10px;
+    height: 10px;
+}
+
+.main__button-coins {
+    width: 90%;
+    height: 30px;
+    margin: 12px auto;
+    padding-top: 9px;
+    background-color: var(--soft-orange);
+    border-radius: 10px;
+}
+
+.blue-coin--button {
+    background-color: #E7F5FF;
+}
+
+/* ----- TWO SECTION ----- */
+.main__product-detail {
+    min-width: 323px;
+    height: auto;
+    position: relative;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+
+.main__product-logo {
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    top: -10px;
+    right: calc(50% - 20px);
+    background-image: url("./assets/imgs/logo-only.svg");
+}
+.main__product-title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.main__product-title h2 {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--off-white);
+}
+.main__product-title p {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    color: #808080;
+}
+
+.product__detail-card {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.16);
+}
+.product__detail-card .clock {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("./assets/icons/clock.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product__detail-card .eye {
+    background-image: url("./assets/icons/eye.svg");
+}
+.product__detail-card .money {
+    background-image: url("./assets/icons/dollar-sign.svg");
+}
+.product__detail-card .check {
+    background-image: url("./assets/icons/check-circle.svg");
+}
+
+.product__card-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--off-white);
+}
+.product__card-body {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+/* ----- THREE SECTION ----- */
+
+.bitcon__img-container {
+    width: 100%;
+    min-width: 320px;
+    height: 60vh;
+    background-image: url("./assets/imgs/bitcoinbaby-x3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bitcon__img-container h2 {
+    text-align: center;
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--off-white);
+}
+
+/* ----- FOUR SECTION ----- */
+
+.main__plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.main__plans-title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.main__plans-title h2 {
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.main__plans-title p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--parrafo);
+}
+
+.plans__container-slider {
+    display: flex;
+    gap: 20px;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+/* .plans__container-slider::-webkit-scrollbar {
+    background-color: var(--soft-blue);
+    height: 3px;
+}
+.plans__container-slider::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-blue);
+} */
+
+.plans__container-card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+.recommended {
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    padding: 8px;
+    left: calc(50% - 60px);
+    top: -15px;
+    font-size: 1.2rem;
+    background-color: var(--bitcon-orange);
+    border-radius: 8px;
+    color: var(--off-white);
+}
+.blue--card {
+    background-color: var(--secondary-blue);
+}
+.black--card {
+    background-color: var(--black);
+}
+.plans__card-title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+}
+.plans__card-price {
+    position: relative;
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    color: var(--black);
+}
+.plans__card-price span {
+    font-size: 1.2rem;
+    font-weight: 300;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 45px);
+}
+.price--left span {
+    left: calc(50% - 60px);
+}
+.plans__card-saving {
+    font-size: 1.2rem;
+    color: var(--parrafo);
+}
+.plans__card-ca {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: var(--off-white);
+    border: 1px solid var(--bitcon-orange);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+    font-family: 'DM sans', sans-serif;
+}
+.blue--button {
+    border: 1px solid var(--secondary-blue);
+}
+.black--button {
+    border: 1px solid var(--black);
+}
+.plans__card-ca span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets/icons/arrow-right-orange.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    vertical-align: text-bottom;
+}
+
+/*  */
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcon-orange);
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+.left li {
+    margin: 10px 0;
+}
+.left a {
+    text-decoration: none;
+    color: var(--off-white);
+}
